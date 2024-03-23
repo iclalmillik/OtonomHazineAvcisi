@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B028384-3771-4341-B089-6009096B2D19}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProLabHazine</RootNamespace>
+    <AssemblyName>ProLabHazine</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AnaForm.Designer.cs">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\ObstacleScripts\DynamicObstacles\Bee.cs" />
+    <Compile Include="Scripts\ObstacleScripts\DynamicObstacles\Bird.cs" />
+    <Compile Include="Scripts\ObstacleScripts\DynamicObstacles\DynamicObstacle.cs" />
+    <Compile Include="Forms\GirisPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GirisPanel.Designer.cs">
+      <DependentUpon>GirisPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\Other\Location.cs" />
+    <Compile Include="Scripts\ObstacleScripts\StaticObstacles\Mountain.cs" />
+    <Compile Include="Scripts\ObstacleScripts\Obstacle.cs" />
+    <Compile Include="Scripts\Other\Character.cs" />
+    <Compile Include="Scripts\Other\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\ObstacleScripts\StaticObstacles\Rock.cs" />
+    <Compile Include="Scripts\Other\Runtime.cs" />
+    <Compile Include="Scripts\ObstacleScripts\StaticObstacles\StaticObstacle.cs" />
+    <Compile Include="Scripts\ObstacleScripts\StaticObstacles\Tree.cs" />
+    <Compile Include="Scripts\ObstacleScripts\StaticObstacles\Wall.cs" />
+    <Compile Include="Scripts\TresureScripts\CopperChest.cs" />
+    <Compile Include="Scripts\TresureScripts\EmeraldChest.cs" />
+    <Compile Include="Scripts\TresureScripts\GoldenChest.cs" />
+    <Compile Include="Scripts\TresureScripts\SilverChest.cs" />
+    <Compile Include="Scripts\TresureScripts\Tresure.cs" />
+    <EmbeddedResource Include="Forms\AnaForm.resx">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GirisPanel.resx">
+      <DependentUpon>GirisPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sprites\Bee.jpg" />
+    <Content Include="Sprites\Bird.jpg" />
+    <Content Include="Sprites\CopperChest.png" />
+    <Content Include="Sprites\EmeraldChest.png" />
+    <Content Include="Sprites\GoldenChest.png" />
+    <Content Include="Sprites\MountainSummer.jpg" />
+    <Content Include="Sprites\MountainWinter.jpg" />
+    <Content Include="Sprites\Player.jpg" />
+    <Content Include="Sprites\RockSummer.jpg" />
+    <Content Include="Sprites\RockWinter.jpg" />
+    <Content Include="Sprites\SilverChest.png" />
+    <Content Include="Sprites\TreeSummer.jpg" />
+    <Content Include="Sprites\TreeWinter.jpg" />
+    <Content Include="Sprites\WallSummer.jpg" />
+    <Content Include="Sprites\WallWinter.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
